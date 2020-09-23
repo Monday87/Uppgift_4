@@ -20,7 +20,7 @@ namespace AzureFunction
 
 
         private static readonly ServiceClient serviceClient =
-         ServiceClient.CreateFromConnectionString(Environment.GetEnvironmentVariable("IotHubConnection"));
+         ServiceClient.CreateFromConnectionString("HostName=ec-win20-iothub-steven.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=Xj6w/mX+jl3hAS5mUQ2XKek12LUP1wiyHI4REuXS3lY=");
 
         [FunctionName("SendMessageToDevice")]
         public static async Task<IActionResult> Run(
